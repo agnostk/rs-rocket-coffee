@@ -1,0 +1,191 @@
+/* #region Global */
+
+/* #region Colors */
+:root {
+  --backgrond: #000;
+  --text-color: #fff;
+  --button: #8257e5;
+  --border: #29292e;
+  --border-menu-mobile: #a8a8b3;
+  --text-color-menu-mobile: #e1e1e6;
+}
+/* #endregion Colors */
+
+/* #region Generic */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/blur-1.png") -120px calc(100% + 48px) no-repeat,
+    url("./assets/blur-2.png") right -170px no-repeat, var(--backgrond);
+  color: var(--text-color);
+  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  letter-spacing: 0.02rem;
+}
+
+.content {
+  width: min(60rem, 70%);
+  margin: auto;
+}
+/* #endregion Generic */
+
+/* #endregion Global */
+
+/* #region Header */
+header {
+  width: min(60rem, 80%);
+  margin: auto;
+  padding: 2.5rem 1rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 1.5rem;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+nav img {
+  margin-right: 0.625rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+  flex-grow: 0.5;
+}
+
+.btn-coffee {
+  background: none;
+  color: var(--text-color);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid var(--button);
+  border-radius: 0.375rem;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  display: flex;
+  gap: 0.625rem;
+}
+/* #endregion Header */
+
+/* #region Main */
+main {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main h2 {
+  display: none;
+}
+
+main h1 {
+  user-select: none;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+main h1.stroked {
+  color: rgba(0, 0, 0, 1);
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+    -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+/* #endregion Main */
+
+/* #region Footer */
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.fixed-bottom {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}
+
+.fixed-bottom img {
+  height: 100%;
+  width: 100%;
+}
+/* #endregion Footer */
+
+/* #region Responsive */
+.mobile {
+  display: none;
+}
+
+/* #endregion Responsive */
+@media screen and (max-width: 850px) {
+  .content {
+    width: 90%;
+  }
+
+  .mobile {
+    display: inherit;
+  }
+
+  /* #region Navbar */
+  .desktop,
+  nav ul,
+  nav button {
+    display: none;
+  }
+
+  nav {
+    background-color: var(--backgrond);
+    padding: 1.5rem;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border);
+  }
+
+  header {
+    width: 100%;
+    padding: 0;
+  }
+  /* #endregion Navbar */
+
+  /* #region Main */
+  main {
+    row-gap: 5rem;
+  }
+
+  main h1 {
+    font-size: 3.125rem;
+  }
+
+  main p {
+    font-size: 1.875rem;
+    padding: 2rem;
+  }
+  /* #endregion Main */
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background: url("./assets/blur-mobile.png") center bottom no-repeat,
+      var(--backgrond);
+  }
+}
