@@ -84,6 +84,13 @@ nav ul {
   display: flex;
   gap: 0.625rem;
 }
+
+i {
+  color: black;
+  background: black;
+  border: none;
+  outline: none;
+}
 /* #endregion Header */
 
 /* #region Main */
