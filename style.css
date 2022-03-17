@@ -154,12 +154,11 @@ footer {
     display: inherit;
   }
 
-  /* #region Navbar */
-  .desktop,
-  nav ul,
-  nav button {
+  .desktop {
     display: none;
   }
+
+  /* #region Navbar */
 
   nav {
     background-color: var(--backgrond);
